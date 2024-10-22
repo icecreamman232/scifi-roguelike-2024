@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 8506572053467043860}
   - component: {fileID: 7604226525660991106}
   - component: {fileID: 7557540290637961322}
+  - component: {fileID: 4658539623520233485}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -208,3 +209,20 @@ MonoBehaviour:
   m_shipData: {fileID: 11400000, guid: 4e3c07cc23a41274988db17f22934b5f, type: 2}
   m_movementDirection: {x: 0, y: 0}
   m_modelTransform: {fileID: 788426339764677224}
+--- !u!114 &4658539623520233485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3899834572349821872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5109d386d688e314f97c9ddf8ede762b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_currentHealth: 0
+  m_maxHealth: 0
+  m_isInvulnerable: 0
+  m_shipData: {fileID: 11400000, guid: 4e3c07cc23a41274988db17f22934b5f, type: 2}
+  m_healthBarEvent: {fileID: 11400000, guid: 4fd10862db9d8734182859ebbb61cf34, type: 2}
