@@ -1,4 +1,3 @@
-using System;
 using SGGames.Scripts.Characters;
 using SGGames.Scripts.Data;
 using UnityEngine;
@@ -12,11 +11,13 @@ namespace SGGames.Scripts.Character
         [SerializeField] private PlayerShipData m_shipData;
         [SerializeField] private Vector2 m_movementDirection;
         [SerializeField] private Transform m_modelTransform; 
+        [SerializeField] private Vector2 m_worldLimit;
         
         private float m_currentSpeed;
         private Vector2 m_rotationVec;
         private float m_rotateAngle;
         private Camera m_camera;
+        private Vector3 m_lastPosition;
         
 
         private void Start()
@@ -62,6 +63,33 @@ namespace SGGames.Scripts.Character
         private void UpdateMovement()
         {
             transform.Translate(m_movementDirection * (m_currentSpeed * Time.deltaTime));
+            CheckMovementLimit();
+        }
+
+        private void CheckMovementLimit()
+        {
+            m_lastPosition = transform.position;
+            if (m_lastPosition.y > m_worldLimit.y)
+            {
+                m_lastPosition.y = m_worldLimit.y;
+            }
+
+            if (m_lastPosition.y < -m_worldLimit.y)
+            {
+                m_lastPosition.y = -m_worldLimit.y;
+            }
+
+            if (m_lastPosition.x > m_worldLimit.x)
+            {
+                m_lastPosition.x = m_worldLimit.x;
+            }
+            
+            if (m_lastPosition.x < -m_worldLimit.x)
+            {
+                m_lastPosition.x = -m_worldLimit.x;
+            }
+            
+            transform.position = m_lastPosition;
         }
 
         private void UpdateRotation()
