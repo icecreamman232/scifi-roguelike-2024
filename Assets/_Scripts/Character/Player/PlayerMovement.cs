@@ -19,6 +19,8 @@ namespace SGGames.Scripts.Character
         private Camera m_camera;
         private Vector3 m_lastPosition;
         
+        public Vector2 BodyRotationDirection => m_rotationVec;
+        public Quaternion BodyRotation => m_modelTransform.rotation;
 
         private void Start()
         {
