@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,12 +13,15 @@ namespace SGGames.Scripts.Healths
         [SerializeField] protected float m_currentHealth;
         [SerializeField] protected float m_maxHealth;
         [SerializeField] protected bool m_isInvulnerable;
+
+        public Action OnHit;
         
         public virtual void TakeDamage(float damage,float invulnerableDuration, GameObject source)
         {
             if (m_isInvulnerable) return;
             
             m_currentHealth -= damage;
+            OnHit?.Invoke();
             UpdateHealthBar();
             
             if (m_currentHealth <= 0)
