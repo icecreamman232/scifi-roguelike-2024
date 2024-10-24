@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7591f913a2ba504596d6b30f21a36f3, type: 3}
   m_Name: AngryOx_EnemyWeaponData
   m_EditorClassIdentifier: 
-  DelayBetweenShots: 0
+  DelayBetweenShots: 1.5

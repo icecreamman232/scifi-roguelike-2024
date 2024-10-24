@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 namespace SGGames.Scripts.Data
@@ -13,11 +14,17 @@ namespace SGGames.Scripts.Data
         {
             BulletData.BulletSpeed = speed;
             BulletData.BulletRange = range;
+            EditorUtility.SetDirty(BulletData);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
         }
 
         public void UpdateWeaponData(float delayBetweenShots)
         {
             WeaponData.DelayBetweenShots = delayBetweenShots;
+            EditorUtility.SetDirty(WeaponData);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
         }
     }
 }
