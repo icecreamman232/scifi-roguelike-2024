@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using SGGames.Scripts.Data;
-using UnityEditor;
 using UnityEngine;
 
 public class ReadCSV : MonoBehaviour
@@ -33,4 +30,6 @@ public class ReadCSV : MonoBehaviour
             container.UpdateWeaponData(float.Parse(data[3]));
         }
     }
+    
+    
 }
