@@ -48,7 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_shootPivot: {fileID: 2349755169693044268}
   m_bulletPooler: {fileID: 4633825363087759393}
-  m_delayBetween2Shots: 1.5
+  m_delayBetween2Shots: 8
+  m_weaponData: {fileID: 11400000, guid: 4341bd1881bb82345bd982d3d32ca790, type: 2}
 --- !u!114 &4633825363087759393
 MonoBehaviour:
   m_ObjectHideFlags: 0

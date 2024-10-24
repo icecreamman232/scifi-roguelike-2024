@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1258539660946470698}
   - component: {fileID: 6700657526473237177}
   - component: {fileID: 7096149923166838912}
-  - component: {fileID: 2571308856247130350}
+  - component: {fileID: 3807022683491952261}
   m_Layer: 9
   m_Name: SpaceOxBullet
   m_TagString: Untagged
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_targetLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &2571308856247130350
+--- !u!114 &3807022683491952261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3924621122981063176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f001e5ea16bc84e8b13c5845517f8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6476843645190a64ca7aaa841818b40e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_model: {fileID: 5043886293125542373}
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_direction: {x: 0, y: 0}
   m_destroyIfMaxRange: 1
   m_range: 10
+  m_bulletData: {fileID: 11400000, guid: 76cde41c84e239e46b161f5d576ecdbf, type: 2}
 --- !u!1 &4510165529078888085
 GameObject:
   m_ObjectHideFlags: 0
