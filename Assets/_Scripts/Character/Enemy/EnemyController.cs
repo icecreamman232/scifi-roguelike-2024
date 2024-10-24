@@ -8,6 +8,8 @@ namespace SGGames.Scripts.Enemy
         [SerializeField] private EnemyBrain m_initBrain;
         [SerializeField] private EnemyBrain m_currentBrain;
 
+        public EnemyBrain CurrentBrain => m_currentBrain;
+        
         private void Start()
         {
             m_initBrain.Owner = this;
