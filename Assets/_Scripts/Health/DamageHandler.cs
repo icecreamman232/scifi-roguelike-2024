@@ -1,3 +1,4 @@
+using System;
 using SGGames.Scripts.Managers;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -11,6 +12,8 @@ namespace SGGames.Scripts.Healths
         [SerializeField] protected float m_invulnerableDuration;
         [SerializeField] protected LayerMask m_targetLayer;
 
+        public Action OnHitDamagable;
+        
         public virtual void SetDamage(float min, float max)
         {
             m_minDamage = min;
@@ -35,6 +38,7 @@ namespace SGGames.Scripts.Healths
             if (health != null)
             {
                 health.TakeDamage(GetDamage(),m_invulnerableDuration,this.gameObject);
+                OnHitDamagable?.Invoke();
             }
         }
     }
